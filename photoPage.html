@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Monica's Photos/About</title>
+  <title>Monica's Photos/Photos</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -28,6 +28,15 @@
   </div>
 </nav>
 
+<!-- The Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="photoSidebar">
+    <button class="w3-bar-item w3-button w3-large"
+    onclick="w3_close_photo()">Close &times;</button>
+    <a href="#" class="w3-bar-item w3-button">Sophie</a>
+    <a href="#" class="w3-bar-item w3-button">Blurry Lori</a>
+    <a href="#" class="w3-bar-item w3-button">A Stapler</a>
+  </div>
+
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
 
@@ -42,23 +51,27 @@
   </div>
 
   <body>
-    <div class="w3-row">
-      <div class="w3-col s6 w3-center">
-        <h1> About Me </h1>
-        <p> 
-          <!-- Placeholder Section of "About Me" -->
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2> Lorum Ipsum </h2>
-        <p> 
-          Lorem ipsum dolor sit amet, quo ad alii posse ponderum, everti singulis consectetuer cum ut. Nibh illud animal et cum, pri ex noluisse rationibus eloquentiam. Te sea laoreet scriptorem, pro tantas populo scribentur an, te integre docendi pro. Ei per consequat liberavisse. Vel an eligendi mnesarchum. Te sale justo his, mea cu dicat dicit, probo labores delicatissimi ex nec.<br><br>
 
-          Ut agam quas mea. Vel ne viris definitiones, et natum ignota eloquentiam qui, amet audire definitiones ad pro. Nec an nostro vocibus fabellas, cu epicuri percipit has. Nostro perpetua deseruisse ius cu, pri verear corpora ex, ut vel agam conceptam. Ut ferri commodo mei.
-        <p>
-      </div>
-      <div class="w3-col s6 w3-center">
-        <img src="Photos/MonicaFamily.jpg" alt="A photo of Monica, her husband Trey, and her child Sophia">
+  
+
+  <div id="main">
+
+    <div class="w3-teal">
+      <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open_photo()">&#9776;</button>
+      <div class="w3-container">
+        <h1>My Page</h1>
       </div>
     </div>
+
+    <img src="Photos/SophieGrass.jpg" alt="Car" style="width:100%">
+
+    <div class="w3-container">
+      <p>Hopefully here there will be more than 1 photo </p>
+    </div>
+
+  </div>
+
+
   </body>
 
   <!-- Footer -->
@@ -75,7 +88,7 @@
 </div>
 
 <script>
-  // Open and close sidebar
+  // Open and close main sidebar
   function w3_open() {
     document.getElementById("mySidebar").style.width = "100%";
     document.getElementById("mySidebar").style.display = "block";
@@ -83,6 +96,14 @@
 
   function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
+  }
+
+  function w3_open_photo() {
+    document.getElementById("photoSidebar").style.display = "block";
+  }
+
+  function w3_close_photo() {
+    document.getElementById("photoSidebar").style.display = "none";
   }
 </script>
 
